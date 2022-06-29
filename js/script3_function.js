@@ -38,32 +38,31 @@ console.log(sayHello(names));
 //2
 function returnNeighboringNumbers(num) {
 const arr = [];
-arr[0] = num - 1;
-arr[1] = num;
-arr[2] = num + 1;
+arr[0] = num2 - 1;
+arr[1] = num2;
+arr[2] = num2 + 1;
 return arr;
 }
 
-let num = 5;
-console.log(returnNeighboringNumbers(num));
+let num2 = 5;
+console.log(returnNeighboringNumbers(num2));
 
 //3
 function getMathResult(baza, i) {
-let result = '', num = 0;
-const text = '---';    
-if (typeof(baza) === "number" && typeof(i) === "number" && i > 0){
+let result = '', num3 = 0;
+const text = '---';  
+ if (i <= 0 || typeof(i) != "number" ) {
+    return baza;
+  }  else if (typeof(baza) === "number" && typeof(i) === "number" && i > 0){
    while (i > 0){
-    num = num + baza;
-    result += num;
+    num3 = num3 + baza;
+    result += num3;
     if (i != 1) result += text;
     i--;
    }
-} else if(i <= 0 || typeof(i) != "number" ) {
-  result = baza;
 }
 return result;
 }
-
 console.log(getMathResult(5, 3));
 
 //Работа со строками
@@ -71,5 +70,5 @@ const logg = "Hello World!";
 console.log(logg.slice(6, 11));
 console.log(logg.substr(6, 2));
 // Математика
-let num = 12.5;
-console.log(Math.round(num));
+let num4 = 12.5;
+console.log(Math.round(num4));
